@@ -1,0 +1,120 @@
+<schema xmlns="http://xlate.io/EDISchema/v4">
+  <transaction>
+    <sequence>
+      <segment type="AK1" minOccurs="1" />
+      <loop code="2000" maxOccurs="999999">
+        <sequence>
+          <segment type="AK2" />
+          <loop code="2100" maxOccurs="999999">
+            <sequence>
+              <segment type="AK3" />
+              <segment type="AK4" maxOccurs="99" />
+            </sequence>
+          </loop>
+          <segment type="AK5" minOccurs="1" />
+        </sequence>
+      </loop>
+      <segment type="AK9" minOccurs="1" />
+    </sequence>
+  </transaction>
+
+  <elementType name="E0002" code="2" base="numeric" maxLength="6" />
+  <elementType name="E0028" code="28" base="numeric" maxLength="9" />
+  <elementType name="E0097" code="97" base="numeric" maxLength="6" />
+  <elementType name="E0123" code="123" base="numeric" maxLength="6" />
+  <elementType name="E0143" code="143" base="string" minLength="3" maxLength="3">
+    <!-- Enumerated values omitted for example -->
+  </elementType>
+  <elementType name="E0329" code="329" base="string" minLength="4" maxLength="9" />
+  <elementType name="E0447" code="447" base="string" maxLength="4" />
+  <elementType name="E0479" code="479" base="string" minLength="2" maxLength="2">
+    <!-- Enumerated values omitted for example -->
+  </elementType>
+  <elementType name="E0480" code="480" base="string" maxLength="12" />
+  <elementType name="E0715" code="715" base="string">
+    <!-- Enumerated values omitted for example -->
+  </elementType>
+  <elementType name="E0716" code="716" base="string" maxLength="3">
+    <!-- Enumerated values omitted for example -->
+  </elementType>
+  <elementType name="E0717" code="717" base="string">
+    <!-- Enumerated values omitted for example -->
+  </elementType>
+  <elementType name="E0718" code="718" base="string" maxLength="3">
+    <!-- Enumerated values omitted for example -->
+  </elementType>
+  <elementType name="E0719" code="719" base="numeric" maxLength="10" />
+  <elementType name="E0720" code="720" base="string" maxLength="3">
+    <!-- Enumerated values omitted for example -->
+  </elementType>
+  <elementType name="E0721" code="721" base="string" minLength="2" maxLength="3" />
+  <elementType name="E0722" code="722" base="numeric" maxLength="2" />
+  <elementType name="E0723" code="723" base="string" maxLength="3">
+    <!-- Enumerated values omitted for example -->
+  </elementType>
+  <elementType name="E0724" code="724" base="string" maxLength="99" />
+  <elementType name="E0725" code="725" base="numeric" maxLength="4" />
+  <elementType name="E1528" code="1528" base="numeric" maxLength="2" />
+  <elementType name="E1686" code="1686" base="numeric" maxLength="4" />
+  <elementType name="E1705" code="1705" base="string" maxLength="35" />
+  <compositeType name="C030">
+    <sequence>
+      <element type="E0722" minOccurs="1" />
+      <element type="E1528" />
+      <element type="E1686" />
+    </sequence>
+  </compositeType>
+  <segmentType name="AK1">
+    <sequence>
+      <element type="E0479" minOccurs="1" />
+      <element type="E0028" minOccurs="1" />
+      <element type="E0480" />
+    </sequence>
+  </segmentType>
+  <segmentType name="AK2">
+    <sequence>
+      <element type="E0143" minOccurs="1" />
+      <element type="E0329" minOccurs="1" />
+      <element type="E1705" />
+    </sequence>
+  </segmentType>
+  <segmentType name="AK3">
+    <sequence>
+      <element type="E0721" minOccurs="1" />
+      <element type="E0719" minOccurs="1" />
+      <element type="E0447" />
+      <element type="E0720" />
+    </sequence>
+  </segmentType>
+  <segmentType name="AK4">
+    <sequence>
+      <composite type="C030" minOccurs="1" />
+      <element type="E0725" />
+      <element type="E0723" minOccurs="1" />
+      <element type="E0724" />
+    </sequence>
+  </segmentType>
+  <segmentType name="AK5">
+    <sequence>
+      <element type="E0717" minOccurs="1" />
+      <element type="E0718" />
+      <element type="E0718" />
+      <element type="E0718" />
+      <element type="E0718" />
+      <element type="E0718" />
+    </sequence>
+  </segmentType>
+  <segmentType name="AK9">
+    <sequence>
+      <element type="E0715" minOccurs="1" />
+      <element type="E0097" minOccurs="1" />
+      <element type="E0123" minOccurs="1" />
+      <element type="E0002" minOccurs="1" />
+      <element type="E0716" />
+      <element type="E0716" />
+      <element type="E0716" />
+      <element type="E0716" />
+      <element type="E0716" />
+    </sequence>
+  </segmentType>
+</schema>
