@@ -1,0 +1,7 @@
+C:\Users\carlo\source\repos\BlockChain\BlockChain\bin\Debug\BlockChain.exe.config
+C:\Users\carlo\source\repos\BlockChain\BlockChain\bin\Debug\BlockChain.exe
+C:\Users\carlo\source\repos\BlockChain\BlockChain\bin\Debug\BlockChain.pdb
+C:\Users\carlo\source\repos\BlockChain\BlockChain\obj\Debug\BlockChain.csprojAssemblyReference.cache
+C:\Users\carlo\source\repos\BlockChain\BlockChain\obj\Debug\BlockChain.csproj.CoreCompileInputs.cache
+C:\Users\carlo\source\repos\BlockChain\BlockChain\obj\Debug\BlockChain.exe
+C:\Users\carlo\source\repos\BlockChain\BlockChain\obj\Debug\BlockChain.pdb
